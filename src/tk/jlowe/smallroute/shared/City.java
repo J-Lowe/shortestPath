@@ -9,6 +9,7 @@ public class City {
 	
 	public City(String name) {
 		this.name = name;
+		distances = new HashMap<City, Double>();
 	}
 	
 	public String getName() {
@@ -27,7 +28,9 @@ public class City {
 		return distances.keySet();
 	}
 	
+	
 	public boolean equals(City city) {
+		//System.out.println("City 1: " + city.name + "\nCity 2: " + this.name);
 		if(this.name.equals(city.name))
 			return true;
 		else
